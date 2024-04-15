@@ -1,11 +1,16 @@
 {
   "extends": "@repo/typescript-config/nextjs.json",
   "compilerOptions": {
+    "baseUrl": ".", // 프로젝트 루트를 기준으로 설정
+    "paths": {
+      "@/*": ["./*"]
+    },
     "plugins": [
       {
         "name": "next"
       }
-    ]
+    ],
+    "typeRoots": ["./@types", "./node_modules/@types"]
   },
   "include": [
     "next-env.d.ts",
